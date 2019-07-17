@@ -31,7 +31,7 @@
 		var navToggler = $('.navbar-toggler');
 		$(".smoothscroll[href^='#'], #pb-navbar ul li a[href^='#']").on('click', function(e) {
 		 	e.preventDefault();
-		 	var hash = this.hash;
+			 var hash = this.hash;
 		 		
 		 	$('html, body').animate({
 
@@ -321,6 +321,11 @@
 
 	};
 
+	var scrollToAbout = function() {
+		$("html, body").animate({scrollTop: $("#section-about").scrollTop()}, 1000);
+		console.log('scrolled');
+	}
+
 
 	$(function(){
 
@@ -335,6 +340,8 @@
 		// magnificPopupControl();
 		smoothScroll();
 		portfolioMasonry();
+
+		// scrollToAbout();
 	});
 
 	
@@ -342,3 +349,9 @@
 
 })();
 
+var scrollToAbout = function() {
+	$("html, body").animate({scrollTop: $("#section-about").offset().top}, 700);
+	console.log('scrolled');
+}
+
+scrollToAbout();
