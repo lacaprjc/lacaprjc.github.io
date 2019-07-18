@@ -354,4 +354,4 @@ var scrollToAbout = function() {
 	console.log('scrolled');
 }
 
-scrollToAbout();
+// scrollToAbout();
